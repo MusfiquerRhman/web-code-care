@@ -93,7 +93,7 @@ const Task = () => {
                     </div>
                 </div>
             ))}
-            {ToDos.length && <div className='flex flex-row justify-between items-center rounded-lg shade-background mt-4 w-full max-w-3xl p-4 accent-border-thin'>
+            {ToDos.length > 0 && <div className='flex flex-row justify-between items-center rounded-lg shade-background mt-4 w-full max-w-3xl p-4 accent-border-thin'>
                 <p>{ToDos.filter(todo => todo[1] === false).length} Left</p>
                 {ToDos.length > 0 && <button onClick={() => clearCompleted()} type='button' aria-label='edit'>Clear Completed </button>}
             </div>}
