@@ -4,6 +4,7 @@ import App from './App.tsx'
 import { AccentContextProvider } from './context/AccentContext.tsx'
 import { FilterContextProvider } from './context/FilterContext.tsx'
 import { ThemeContextProvider } from './context/ThemeContext.tsx'
+import { ToDoContextProvider } from './context/ToDoContext.tsx'
 import './index.css'
 
 createRoot(document.getElementById('root')!).render(
@@ -11,7 +12,9 @@ createRoot(document.getElementById('root')!).render(
         <FilterContextProvider>
           <AccentContextProvider>
             <ThemeContextProvider>
-              <App />
+              <ToDoContextProvider>
+                <App />
+              </ToDoContextProvider>
             </ThemeContextProvider>
           </AccentContextProvider>
         </FilterContextProvider>

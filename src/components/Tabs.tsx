@@ -8,25 +8,19 @@ const Tabs = () => {
             <div className='flex flex-row max-w-3xl w-full rounded-lg overflow-hidden accent-border-thin'>
                 <button onClick={() => setFilter('all')} 
                     type='button' 
-                    className={`w-full bg-white text-black text-xl p-2 ${filter === "all" && 'accent-background'}`}
+                    className={`w-full text-xl p-2 ${filter === "all" ? 'accent-background' : 'shade-background '}`}
                 >
                     All
                 </button>
-                <button onClick={() => setFilter('coming')} 
-                    type='button' 
-                    className={`w-full bg-white text-black text-xl p-2 ${filter === "coming" && 'accent-background'}`}
-                >
-                    Coming
-                </button>
                 <button onClick={() => setFilter('pending')} 
                     type='button' 
-                    className={`w-full bg-white text-black text-xl p-2 ${filter === "pending" && 'accent-background'}`}
+                    className={`w-full text-xl p-2 ${filter === "pending" ? 'accent-background' : 'shade-background '}`}
                 >
                     Pending
                 </button>
                 <button onClick={() => setFilter('complete')} 
                     type='button' 
-                    className={`w-full bg-white text-black text-xl p-2 ${filter === "complete" && 'accent-background'}`}
+                    className={`w-full text-xl p-2 ${filter === "complete" ? 'accent-background' : 'shade-background '}`}
                 >
                     Completed
                 </button>

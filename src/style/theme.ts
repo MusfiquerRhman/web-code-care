@@ -3,11 +3,13 @@ import { createGlobalStyle } from "styled-components";
 const commonLightColors = {
 	background: "#FFFFFF",
 	textColor: "#000000",
+	shade: "#FFFFFF"
 };
 
 const commonDarkColors = {
 	background: "#000000",
 	textColor: "#FFFFFF",
+	shade: "#111827"
 };
 
 interface AccentScheme {
@@ -88,6 +90,10 @@ export const GlobalStyles = createGlobalStyle`
 		border: 3px solid ${(props) => props.theme.primary};
 	}
 
+	.accent-border-bottom {
+		border-bottom: 3px solid ${(props) => props.theme.primary};
+	}
+
 	.accent-border-thin {
 		border: 2px solid ${(props) => props.theme.primary};
 	}
@@ -100,6 +106,15 @@ export const GlobalStyles = createGlobalStyle`
 
 	.accent-text {
 		color: ${(props) => props.theme.primary};
+	}
+
+	.shade-background {
+		background-color: ${(props) => props.theme.shade};
+		color: ${(props) => props.theme.textColor};
+	}
+
+	.theme-text {
+		color: ${(props) => props.theme.textColor}
 	}
 
 	input[type="datetime-local"]::-webkit-calendar-picker-indicator {
